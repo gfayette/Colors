@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace ColorApp
 {
     partial class Colors
     {
@@ -37,6 +37,7 @@
             this.redUpDown = new System.Windows.Forms.NumericUpDown();
             this.blueUpDown = new System.Windows.Forms.NumericUpDown();
             this.greenUpDown = new System.Windows.Forms.NumericUpDown();
+            this.normalizeBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.redBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blueBar)).BeginInit();
@@ -156,12 +157,29 @@
             this.greenUpDown.TabIndex = 8;
             this.greenUpDown.ValueChanged += new System.EventHandler(this.greenUpDown_ValueChanged);
             // 
+            // normalizeBox
+            // 
+            this.normalizeBox.AutoSize = true;
+            this.normalizeBox.BackColor = System.Drawing.Color.Transparent;
+            this.normalizeBox.Checked = true;
+            this.normalizeBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.normalizeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.normalizeBox.ForeColor = System.Drawing.Color.White;
+            this.normalizeBox.Location = new System.Drawing.Point(18, 367);
+            this.normalizeBox.Name = "normalizeBox";
+            this.normalizeBox.Size = new System.Drawing.Size(169, 36);
+            this.normalizeBox.TabIndex = 9;
+            this.normalizeBox.Text = "Normalize";
+            this.normalizeBox.UseVisualStyleBackColor = false;
+            this.normalizeBox.CheckedChanged += new System.EventHandler(this.normalizeBox_CheckedChanged);
+            // 
             // Colors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(735, 664);
+            this.Controls.Add(this.normalizeBox);
             this.Controls.Add(this.greenUpDown);
             this.Controls.Add(this.blueUpDown);
             this.Controls.Add(this.redUpDown);
@@ -196,6 +214,7 @@
         private System.Windows.Forms.NumericUpDown redUpDown;
         private System.Windows.Forms.NumericUpDown blueUpDown;
         private System.Windows.Forms.NumericUpDown greenUpDown;
+        private System.Windows.Forms.CheckBox normalizeBox;
     }
 }
 
